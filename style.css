@@ -1,0 +1,197 @@
+/* style.css - Mini Project Web Nurnita */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a8d8ea;
+    min-height: 100vh;
+    padding: 30px 16px;
+}
+
+.container {
+    max-width: 680px;
+    margin: auto;
+    background: white;
+    padding: 30px 28px;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #222;
+    margin-bottom: 22px;
+}
+
+/* ---- TABS ---- */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 22px;
+    background: #f0f0f0;
+    color: #555;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 0;
+}
+
+.tab:hover {
+    background: #e0e0e0;
+}
+
+.tab.active {
+    background: #4CAF50;
+    color: white;
+}
+
+/* ---- TAB CONTENT ---- */
+.tab-content {
+    display: none;
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+/* ---- PROFIL ---- */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.profile-card img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+}
+
+.profile-info h2 {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.profile-info p {
+    color: #555;
+    font-size: 0.93rem;
+    margin-bottom: 5px;
+}
+
+.profile-info a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4CAF50;
+    font-size: 0.93rem;
+    text-decoration: none;
+}
+
+.profile-info a:hover {
+    text-decoration: underline;
+}
+
+/* ---- INPUT & BUTTON ---- */
+input[type="text"] {
+    padding: 9px 12px;
+    width: 60%;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+button {
+    padding: 9px 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 6px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #43a047;
+}
+
+/* ---- LIST ---- */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+li {
+    padding: 9px 13px;
+    background: white;
+    border-radius: 7px;
+    border: 1px solid #eee;
+    margin-top: 7px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+li:hover {
+    background: #ffe5e5;
+    color: red;
+    border-color: #ffaaaa;
+}
+
+/* ---- STATUS ---- */
+#hasilNama {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+#loading, #loadingStatus {
+    font-weight: bold;
+    color: #1976d2;
+    margin-top: 10px;
+}
+
+#error {
+    color: red;
+    margin-top: 8px;
+}
+
+.hint {
+    font-size: 12px;
+    color: #aaa;
+    margin: 8px 0 4px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 500px) {
+    input[type="text"] { width: 100%; margin-bottom: 8px; }
+    .profile-card { flex-direction: column; text-align: center; }
+}

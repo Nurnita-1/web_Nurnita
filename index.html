@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project Web - Nurnita</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌐 Mini Project Web — Nurnita 🚀</h1>
+
+    <!-- TAB NAVIGASI -->
+    <div class="tabs">
+        <button class="tab active" onclick="showTab('profil', this)">👤 Profil</button>
+        <button class="tab" onclick="showTab('nama', this)">✏️ Input Nama</button>
+        <button class="tab" onclick="showTab('hobi', this)">🎯 Daftar Hobi</button>
+        <button class="tab" onclick="showTab('api', this)">🌐 Data API</button>
+        <button class="tab" onclick="showTab('loading', this)">⏳ Simulasi Loading</button>
+    </div>
+
+    <!-- SECTION: PROFIL -->
+    <div id="tab-profil" class="tab-content active">
+        <div class="profile-card">
+            <img src="fotoprofil.jpeg" alt="Foto Profil Nurnita">
+            <div class="profile-info">
+                <h2>Nurnita</h2>
+                <p>🎓 Universitas Islam Indragiri</p>
+                <p>💡 Ingin menjadi orang yang berguna</p>
+                <p><strong>Hobi:</strong> Membaca Novel, Jalan-jalan, Belajar menjadi lebih baik</p>
+                <a href="https://google.com" target="_blank">🔗 Kunjungi Google</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION: INPUT NAMA -->
+    <div id="tab-nama" class="tab-content">
+        <h2>✏️ Masukkan Nama</h2>
+        <input type="text" id="namaInput" placeholder="Ketik nama kamu...">
+        <button onclick="tampilkanNama()">Tampilkan</button>
+        <p id="hasilNama"></p>
+
+        <h2 style="margin-top:20px;">🎨 Ubah Warna Background</h2>
+        <button onclick="ubahWarna('lightgreen')">Hijau</button>
+        <button onclick="ubahWarna('lightblue')">Biru</button>
+        <button onclick="ubahWarna('lightyellow')">Kuning</button>
+        <button onclick="ubahWarna('#f0f4f8')">Reset</button>
+    </div>
+
+    <!-- SECTION: DAFTAR HOBI -->
+    <div id="tab-hobi" class="tab-content">
+        <h2>🎯 Daftar Hobi</h2>
+        <input type="text" id="hobiInput" placeholder="Masukkan hobi...">
+        <button onclick="tambahHobi()">Tambah</button>
+        <button onclick="hapusSemua()">Hapus Semua</button>
+        <p class="hint">💡 Klik item untuk menghapus</p>
+        <ul id="listHobi"></ul>
+    </div>
+
+    <!-- SECTION: DATA API -->
+    <div id="tab-api" class="tab-content">
+        <h2>🌐 Data User (API)</h2>
+        <input type="text" id="searchInput" placeholder="Cari nama user...">
+        <p id="loading" style="display:none;">⏳ Mengambil data...</p>
+        <p id="error"></p>
+        <ul id="dataUser"></ul>
+    </div>
+
+    <!-- SECTION: SIMULASI LOADING -->
+    <div id="tab-loading" class="tab-content">
+        <h2>⏳ Simulasi Loading</h2>
+        <button onclick="mulaiLoading()">Mulai Loading</button>
+        <p id="loadingStatus"></p>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
